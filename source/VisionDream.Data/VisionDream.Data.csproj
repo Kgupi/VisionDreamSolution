@@ -14,4 +14,22 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DbScripts\KMMStoreDbScripts\" />
+    <Folder Include="DbScripts\LibraryManagerDbScripts\" />
+    <Folder Include="DbScripts\VisionDreamDbScripts\" />
+    <Folder Include="DbScripts\VDBankDbScripts\" />
+    <Folder Include="DbScripts\OLenakeDbScripts\" />
+    <Folder Include="Enumerations\" />
+    <Folder Include="ExtendedModels\KMMStoreExtendedModels\" />
+    <Folder Include="ExtendedModels\LibraryManagerExtendedModels\" />
+    <Folder Include="ExtendedModels\VisionDreamExtendedModels\" />
+    <Folder Include="ExtendedModels\VDBankExtendedModels\" />
+    <Folder Include="Extensions\VisionDreamExtensions\" />
+    <Folder Include="Extensions\VDBankExtensions\" />
+    <Folder Include="Models\VisionDreamModels\" />
+    <Folder Include="Models\VDBankModels\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

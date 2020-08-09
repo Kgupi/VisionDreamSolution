@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VisionDream.Library\VisionDream.Library.csproj" />
-    <ProjectReference Include="..\VisionDream.Repository\VisionDream.Repository.csproj" />
     <ProjectReference Include="..\VisionDream.Services\VisionDream.Services.csproj" />
   </ItemGroup>
 
