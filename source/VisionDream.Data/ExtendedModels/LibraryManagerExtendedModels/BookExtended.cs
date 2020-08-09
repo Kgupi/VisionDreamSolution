@@ -14,23 +14,29 @@
  * under the License.
  * ***************************************************************************/
 
+using System;
 using VisionDream.Data.Models.LibraryManagerModels;
 
-namespace VisionDream.Data.Extensions.LibraryManagerExtensions
+namespace VisionDream.Data.ExtendedModels.LibraryManagerExtendedModels
 {
-    /// <summary>
-    /// The static <see cref="BookExtensions"/> class helps to map <see cref="Map"/> 
-    /// to each other the same two <see cref="Book"/> object entities, for further 
-    /// processing.
-    /// </summary>
-    public static class BookExtensions
+    public class BookExtended : IEntityInt
     {
-        public static void Map(this Book destBook, Book srcBook)
+        public int Id { get; set; }
+        public string ExtName { get; set; }
+        public string ExtAuthor { get; set; }
+        public DateTime ExtCreatedDate { get; set; }
+
+        public BookExtended()
         {
-            destBook.Id = srcBook.Id;
-            destBook.Name = srcBook.Name;
-            destBook.Author = srcBook.Author;
-            destBook.CreatedDate = srcBook.CreatedDate;
+
+        }
+
+        public BookExtended(Book bookEntity)
+        {
+            Id = bookEntity.Id;
+            ExtName = bookEntity.Name;
+            ExtAuthor = bookEntity.Author;
+            ExtCreatedDate = bookEntity.CreatedDate;
         }
     }
 }

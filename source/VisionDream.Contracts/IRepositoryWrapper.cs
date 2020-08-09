@@ -14,23 +14,15 @@
  * under the License.
  * ***************************************************************************/
 
-using VisionDream.Data.Models.LibraryManagerModels;
+using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
-namespace VisionDream.Data.Extensions.LibraryManagerExtensions
+namespace VisionDream.Contracts
 {
-    /// <summary>
-    /// The static <see cref="BookExtensions"/> class helps to map <see cref="Map"/> 
-    /// to each other the same two <see cref="Book"/> object entities, for further 
-    /// processing.
-    /// </summary>
-    public static class BookExtensions
+    public interface IRepositoryWrapper
     {
-        public static void Map(this Book destBook, Book srcBook)
-        {
-            destBook.Id = srcBook.Id;
-            destBook.Name = srcBook.Name;
-            destBook.Author = srcBook.Author;
-            destBook.CreatedDate = srcBook.CreatedDate;
-        }
+        IOnkgopotseRepository OnkgopotseRepository { get; }
+        IBookRepository BookRepository { get; }
     }
 }

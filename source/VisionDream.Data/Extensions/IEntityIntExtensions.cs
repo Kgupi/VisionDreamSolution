@@ -19,11 +19,12 @@ using System;
 namespace VisionDream.Data.Extensions
 {
     /// <summary>
-    /// The static <see cref="IEntityIntExtensions"/>, extension class helps to check entities for two conditions: 
+    /// The static <see cref="IEntityIntExtensions"/> extension class helps to check 
+    /// 'integer Id' based entities for two conditions: 
     ///     1. Check if the whole entity object is null <see cref="IsObjectNull"/> and 
     ///        assign it the value 'null', if the condition is true.
-    ///     2. Check if the entity.ID property is empty <see cref="IsObjectEmpty"/> and 
-    ///        assign it the value 'Empty', if the condition is true.
+    ///     2. Check if the entity.Id property is empty <see cref="IsObjectEmpty"/> and 
+    ///        assign it the value '0', if the condition is true.
     /// </summary>
     public static class IEntityIntExtensions
     {

@@ -14,23 +14,28 @@
  * under the License.
  * ***************************************************************************/
 
-using VisionDream.Data.Models.LibraryManagerModels;
+using System;
 
-namespace VisionDream.Data.Extensions.LibraryManagerExtensions
+namespace VisionDream.Data.Extensions
 {
     /// <summary>
-    /// The static <see cref="BookExtensions"/> class helps to map <see cref="Map"/> 
-    /// to each other the same two <see cref="Book"/> object entities, for further 
-    /// processing.
+    /// The static <see cref="IEntityGidExtensions"/> extension class helps to check 
+    /// 'guid Id' based entities for two conditions: 
+    ///     1. Check if the whole entity object is null <see cref="IsObjectNull"/> and 
+    ///        assign it the value 'null', if the condition is true.
+    ///     2. Check if the entity.Id property is empty <see cref="IsObjectEmpty"/> and 
+    ///        assign it the value 'Empty', if the condition is true.
     /// </summary>
-    public static class BookExtensions
+    public static class IEntityGidExtensions
     {
-        public static void Map(this Book destBook, Book srcBook)
+        public static bool IsObjectNull(this IEntityGid entity)
         {
-            destBook.Id = srcBook.Id;
-            destBook.Name = srcBook.Name;
-            destBook.Author = srcBook.Author;
-            destBook.CreatedDate = srcBook.CreatedDate;
+            return entity == null;
+        }
+
+        public static bool IsObjectEmpty(this IEntityGid entity)
+        {
+            return entity.Id.Equals(Guid.Empty);
         }
     }
 }

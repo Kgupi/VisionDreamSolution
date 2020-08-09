@@ -24,17 +24,12 @@ namespace VisionDream.Data.Models.OLenakeModels
     {
         [Key]
         public int Id { get; set; }
-        //public string PersonTypeCode { get; set; }
-
+        public string PersonTypeCode { get; set; }
         [Required]
         public string FirstName { get; set; }
-
         [Required]
         public string Surname { get; set; }
-        public DateTime BirthDate { get; set; }
-        //public string PhoneNumber { get; set; }
-        //public DateTime CreatedDate { get; set; }
-
+        public char Gender { get; set; }
         [Required]
         public Email EmailAddress { get; set; }
         public Address Address { get; set; }

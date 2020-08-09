@@ -20,22 +20,20 @@ namespace VisionDream.Data.Extensions.OLenakeExtensions
 {
     /// <summary>
     /// The static <see cref="OnkgopotseExtensions"/> class helps to map <see cref="Map"/> 
-    /// the same two <see cref="Onkgopotse"/> object entities (<see cref="dbOnkgopotse"/> 
-    /// and <see cref="onkgopotse"/>) to each other, for further processing.
+    /// to each other the same two <see cref="Onkgopotse"/> object entities, for further 
+    /// processing.
     /// </summary>
     public static class OnkgopotseExtensions
     {
-        public static void Map(this Onkgopotse dbOnkgopotse, Onkgopotse onkgopotse)
+        public static void Map(this Onkgopotse destOnkgopotse, Onkgopotse srcOnkgopotse)
         {
-            dbOnkgopotse.Id = onkgopotse.Id;
-            //dbOnkgopotse.PersonType = onkgopotse.PersonType;
-            dbOnkgopotse.FirstName = onkgopotse.FirstName;
-            dbOnkgopotse.Surname = onkgopotse.Surname;
-            dbOnkgopotse.BirthDate = onkgopotse.BirthDate;
-            //dbOnkgopotse.PhoneNumber = onkgopotse.PhoneNumber;
-            //dbOnkgopotse.CreatedDate = onkgopotse.CreatedDate;
-            dbOnkgopotse.EmailAddress = onkgopotse.EmailAddress;
-            dbOnkgopotse.Address = onkgopotse.Address;
+            destOnkgopotse.Id = srcOnkgopotse.Id;
+            destOnkgopotse.PersonTypeCode = srcOnkgopotse.PersonTypeCode;
+            destOnkgopotse.FirstName = srcOnkgopotse.FirstName;
+            destOnkgopotse.Surname = srcOnkgopotse.Surname;
+            destOnkgopotse.Gender = srcOnkgopotse.Gender;
+            destOnkgopotse.EmailAddress = srcOnkgopotse.EmailAddress;
+            destOnkgopotse.Address = srcOnkgopotse.Address;
         }
     }
 }

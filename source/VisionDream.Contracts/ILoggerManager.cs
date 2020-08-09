@@ -14,12 +14,13 @@
  * under the License.
  * ***************************************************************************/
 
-using System;
-
-namespace VisionDream.Data
+namespace VisionDream.Contracts
 {
-    public interface IEntity
+    public interface ILoggerManager
     {
-        Guid Id { get; set; }
+        void LogInfo(string message);
+        void LogWarn(string message);
+        void LogDebug(string message);
+        void LogError(string message);
     }
 }

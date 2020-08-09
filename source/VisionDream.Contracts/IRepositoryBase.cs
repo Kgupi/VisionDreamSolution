@@ -16,26 +16,17 @@
 
 using System;
 using System.Collections.Generic;
-using VisionDream.Data.Models.OLenakeModels;
+using System.Linq.Expressions;
 
-namespace VisionDream.Data.ExtendedModels.OLenakeExtendedModels
+namespace VisionDream.Contracts
 {
-    public class OnkgopotseExtendedModel : IEntityInt
+    public interface IRepositoryBase<T>
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string Surname { get; set; }
-        public DateTime BirthDate { get; set; }
-        //public string PhoneNumber { get; set; }
-        //public DateTime CreatedDate { get; set; }
-        public Email EmailAddress { get; set; }
-        public Address Address { get; set; }
-
-        //public PersonType PersonTypes { get; set; }
-
-        public OnkgopotseExtendedModel(Onkgopotse onkgopotse)
-        {
-            Id = onkgopotse.Id;
-        }
+        IEnumerable<T> FindAll();
+        IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression);
+        void Create(T entity);
+        void Update(T entity);
+        void Delete(T entity);
+        void Save();
     }
 }

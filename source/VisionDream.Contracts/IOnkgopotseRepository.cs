@@ -14,23 +14,22 @@
  * under the License.
  * ***************************************************************************/
 
-using VisionDream.Data.Models.LibraryManagerModels;
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using VisionDream.Data.Models.OLenakeModels;
+using VisionDream.Data.ExtendedModels.OLenakeExtendedModels;
 
-namespace VisionDream.Data.Extensions.LibraryManagerExtensions
+namespace VisionDream.Contracts
 {
-    /// <summary>
-    /// The static <see cref="BookExtensions"/> class helps to map <see cref="Map"/> 
-    /// to each other the same two <see cref="Book"/> object entities, for further 
-    /// processing.
-    /// </summary>
-    public static class BookExtensions
+    public interface IOnkgopotseRepository : IRepositoryBase<Onkgopotse>
     {
-        public static void Map(this Book destBook, Book srcBook)
-        {
-            destBook.Id = srcBook.Id;
-            destBook.Name = srcBook.Name;
-            destBook.Author = srcBook.Author;
-            destBook.CreatedDate = srcBook.CreatedDate;
-        }
+        Task<IEnumerable<Onkgopotse>> GetAllAsyncData();
+        Task<Onkgopotse> GetByIdAsyncData(int onkgopotseId);
+        Task<OnkgopotseExtended> GetByIdExtendedAsyncData(int onkgopotseId);
+        Task PostCreateAsyncData(Onkgopotse onkgopotse);
+        Task PutUpdateAsyncData(Onkgopotse dbOnkgopotse, Onkgopotse onkgopotse);
+        Task DeleteByIdAsyncData(Onkgopotse onkgopotse);
+        bool GetByIdAsyncData(Func<object, bool> o);
     }
 }

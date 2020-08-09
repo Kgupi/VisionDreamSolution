@@ -22,7 +22,6 @@
     <Folder Include="DbScripts\OLenakeDbScripts\" />
     <Folder Include="Enumerations\" />
     <Folder Include="ExtendedModels\KMMStoreExtendedModels\" />
-    <Folder Include="ExtendedModels\LibraryManagerExtendedModels\" />
     <Folder Include="ExtendedModels\VisionDreamExtendedModels\" />
     <Folder Include="ExtendedModels\VDBankExtendedModels\" />
     <Folder Include="Extensions\VisionDreamExtensions\" />

@@ -36,14 +36,25 @@ namespace VisionDream.Data
         /// </summary>
         public RepositoryDbContext(DbContextOptions<RepositoryDbContext> options) : base(options)
         {
+
         }
 
-        //public DbSet<Onkgopotse> Onkgopotse { get; set; }
-        public DbSet<Book> Book { get; set; }
-        //public DbSet<Product> Product { get; set; }
-        //public virtual DbSet<Employee> Employees { get; set; }
-        //public virtual DbSet<Province> Provinces { get; set; }
-        //public virtual DbSet<Owner> Owners { get; set; }
-        //public virtual DbSet<Account> Accounts { get; set; }
+        //public DbSet<Onkgopotse> OnkgopotseEntity { get; set; }
+        public DbSet<Book> BookEntity { get; set; }
+        //public DbSet<Product> ProductsEntity { get; set; }
+        //public virtual DbSet<Employee> EmployeesEntity { get; set; }
+        //public virtual DbSet<Province> ProvincesEntity { get; set; }
+        //public virtual DbSet<Owner> OwnersEntity { get; set; }
+        //public static DbSet<BankAccount> BankAccountsEntity { get; set; }
+
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Employee>().HasData(
+        //        new Employee() { FirstName = "Onkgopotse", LastName = "Lenake", Email = "gupilenake@gmail.com", Gender = "1" },
+        //        new Employee() { FirstName = "Sandy", LastName = "Khoza", Email = "Sandy.Khoza@outlook.com", Gender = "2" },
+        //        new Employee() { FirstName = "Jafta", LastName = "Dladla", Email = "jafta.dladla@gmail.com", Gender = "1" },
+        //        new Employee() { FirstName = "Sebi", LastName = "Rapoo", Email = "Sebi.Rapoo@vision-dream.local", Gender = "2" }
+        //        );
+        //}
     }
 }
